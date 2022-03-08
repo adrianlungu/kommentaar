@@ -1,9 +1,9 @@
-module github.com/teamwork/kommentaar
+module github.com/adrianlungu/kommentaar
 
 go 1.12
 
 require (
-	arp242.net/sconfig v0.0.0-20180901013357-c014d3b7a101
+	arp242.net/sconfig v1.2.1
 	github.com/davecgh/go-spew v1.1.1
 	github.com/imdario/mergo v0.3.7
 	github.com/pmezard/go-difflib v1.0.0
