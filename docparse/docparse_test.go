@@ -272,7 +272,7 @@ Response 200: {empty}
 POST /path
 
 Response: {empty}
-Response 400 (w00t): {empty}
+Response 400 (w00t): {empty} some error description here
 			`,
 			"",
 			[]*Endpoint{{
@@ -285,7 +285,7 @@ Response 400 (w00t): {empty}
 					},
 					400: {
 						ContentType: "w00t",
-						Body:        &Ref{Description: "400 Bad Request (no data)"},
+						Body:        &Ref{Description: "400 Bad Request (no data) - some error description here"},
 					},
 				},
 			}},

@@ -173,7 +173,7 @@ var allRefs = []string{refDefault, refEmpty, refData}
 var (
 	reBasicHeader    = regexp.MustCompile(`^(Path|Form|Query|Extend): (.+)`)
 	reRequestHeader  = regexp.MustCompile(`^Request body( \((.+?)\))?: (.+)`)
-	reResponseHeader = regexp.MustCompile(`^Response( (\d+?))?( \((.+?)\))?: (.+)`)
+	reResponseHeader = regexp.MustCompile(`^Response( (\d+?))?( \((.+?)\))?: ([^\s]+)?\s?(.*)?`)
 )
 
 // parseComment a single comment block in the file filePath.
@@ -450,6 +450,10 @@ func ParseResponse(prog *Program, filePath, line string) (int, *Response, error)
 				code, filePath, line)
 		}
 		r.Body.Description = codeText
+	}
+
+	if resp[6] != "" {
+		r.Body.Description = fmt.Sprintf("%s - %s", r.Body.Description, resp[6])
 	}
 
 	return int(code), &r, nil
