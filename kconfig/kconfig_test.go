@@ -3,7 +3,7 @@ package kconfig
 import (
 	"testing"
 
-	"github.com/teamwork/kommentaar/docparse"
+	"github.com/adrianlungu/kommentaar/docparse"
 	"github.com/teamwork/test"
 )
 
@@ -14,7 +14,7 @@ func TestLoad(t *testing.T) {
 	}{
 		{"example", test.Read(t, "../config.example")},
 		{"default-response", []byte(test.NormalizeIndent(`
-			default-response 400: github.com/teamwork/kommentaar/docparse.Param
+			default-response 400: github.com/adrianlungu/kommentaar/docparse.Param
 			default-response 404 (application/json): net/mail.Address
 		`))},
 	}

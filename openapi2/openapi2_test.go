@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/teamwork/kommentaar/docparse"
+	"github.com/adrianlungu/kommentaar/docparse"
 )
 
 func TestExample(t *testing.T) {

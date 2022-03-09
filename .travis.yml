@@ -1,7 +1,7 @@
 language: go
 go:
   - 1.17.x
-go_import_path: github.com/teamwork/kommentaar
+go_import_path: github.com/adrianlungu/kommentaar
 notifications:
   email: false
   webhooks: http://tw-bot.teamworkops.com:8182/travis/buildstatus
@@ -13,7 +13,7 @@ install:
 env:
   - GO111MODULE=off
 script:
-  - cd $HOME/gopath/src/github.com/teamwork/kommentaar
+  - cd $HOME/gopath/src/github.com/adrianlungu/kommentaar
   - ./bin/test -race ./...
   - ./bin/coverage ./...
   - ./bin/lint ./...

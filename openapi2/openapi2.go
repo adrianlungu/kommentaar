@@ -2,7 +2,7 @@
 //
 // https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md
 // http://json-schema.org/
-package openapi2 // import "github.com/teamwork/kommentaar/openapi2"
+package openapi2 // import "github.com/adrianlungu/kommentaar/openapi2"
 
 import (
 	"encoding/json"
@@ -11,8 +11,8 @@ import (
 	"sort"
 	"strings"
 
+	"github.com/adrianlungu/kommentaar/docparse"
 	"github.com/imdario/mergo"
-	"github.com/teamwork/kommentaar/docparse"
 	"github.com/teamwork/utils/goutil"
 	yaml "gopkg.in/yaml.v2"
 )

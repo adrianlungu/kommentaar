@@ -1,5 +1,5 @@
 // Package kconfig loads the configuration for Kommentaar.
-package kconfig // import "github.com/teamwork/kommentaar/kconfig"
+package kconfig // import "github.com/adrianlungu/kommentaar/kconfig"
 
 import (
 	"fmt"
@@ -8,9 +8,9 @@ import (
 
 	"arp242.net/sconfig"
 	_ "arp242.net/sconfig/handlers/html/template" // template.HTML handler
-	"github.com/teamwork/kommentaar/docparse"
-	"github.com/teamwork/kommentaar/html"
-	"github.com/teamwork/kommentaar/openapi2"
+	"github.com/adrianlungu/kommentaar/docparse"
+	"github.com/adrianlungu/kommentaar/html"
+	"github.com/adrianlungu/kommentaar/openapi2"
 	"github.com/teamwork/utils/goutil"
 )
 
